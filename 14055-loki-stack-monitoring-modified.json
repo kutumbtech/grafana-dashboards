@@ -218,7 +218,7 @@
             "uid": "VictoriaMetrics"
           },
           "editorMode": "code",
-          "expr": "sum(rate(log_messages_total{app=\"loki-distributed\",level=~\"error|warn\"}[1m])) by (level)\n",
+          "expr": "sum(rate(log_messages_total{app=\"loki\",level=~\"error|warn\"}[1m])) by (level)\n",
           "format": "time_series",
           "hide": false,
           "interval": "",
@@ -310,7 +310,7 @@
             "uid": "Loki"
           },
           "editorMode": "code",
-          "expr": "{app=\"loki-distributed\"} | logfmt | level=\"warn\" or level=\"error\"",
+          "expr": "{app=\"loki\"} | logfmt | level=\"warn\" or level=\"error\"",
           "legendFormat": "",
           "queryType": "range",
           "refId": "A"
@@ -2443,7 +2443,7 @@
     ]
   },
   "timezone": "",
-  "title": "new! - Loki stack monitoring (Promtail, Loki)",
+  "title": "Loki stack monitoring (Promtail, Loki)",
   "uid": "loki_stack_monitoring_quortex",
   "version": 8,
   "weekStart": ""
