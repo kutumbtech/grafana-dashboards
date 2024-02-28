@@ -230,7 +230,7 @@
         "pluginVersion": "7.3.1",
         "targets": [
           {
-            "expr": "sum(log_messages_total)",
+            "expr": "sum(loki_internal_log_messages_total)",
             "instant": false,
             "interval": "",
             "legendFormat": "",
@@ -667,7 +667,7 @@
         "steppedLine": false,
         "targets": [
           {
-            "expr": "sum(irate(log_messages_total[1m])) by (level)",
+            "expr": "sum(irate(loki_internal_log_messages_total[1m])) by (level)",
             "interval": "",
             "legendFormat": "{{ level }}",
             "refId": "A"
