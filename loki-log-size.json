@@ -104,7 +104,7 @@
           "datasource": "default",
           "editorMode": "code",
           "expr": "sum(rate(promtail_file_bytes_total{path=~\"/var/log/pods/${namespace}_${workload}.+\"}[$__interval]))",
-          "legendFormat": "__auto",
+          "legendFormat": "${workload} ${namespace}",
           "range": true,
           "refId": "A"
         }
